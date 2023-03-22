@@ -34,6 +34,9 @@ export default function Home({ logs }: HomeProps) {
 
       const result = await response.json();
       setCurrentLogs(result);
+
+      // On actualise la page pour afficher le nouveau log
+      window.location.reload();
     } catch (error) {
       console.error(error);
     }
